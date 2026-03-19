@@ -8,12 +8,12 @@ export default defineConfig({
   site: "https://guides.ohmyiris.win/",
   integrations: [
     starlight({
-      title: "My Docs",
+      title: "Mas' Docs for You",
       social: [
         {
           icon: "github",
           label: "GitHub",
-          href: "https://github.com/withastro/starlight",
+          href: "https://github.com/masakk1/masdocsforyou",
         },
       ],
       plugins: [
@@ -23,15 +23,13 @@ export default defineConfig({
       ],
       sidebar: [
         {
-          label: "Guides",
-          items: [
-            // Each item here is one entry in the navigation menu.
-            { label: "Example Guide", slug: "guides/example" },
-          ],
-        },
-        {
-          label: "Reference",
-          autogenerate: { directory: "reference" },
+          label: "Linux",
+          autogenerate: { directory: "linux" },
+          // I can also do each item individually:
+          // items: [
+          //   // Each item here is one entry in the navigation menu.
+          //   { label: "Discover programs", slug: "linux/program_discovery" },
+          // ],
         },
       ],
     }),
