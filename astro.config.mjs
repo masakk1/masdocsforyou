@@ -2,6 +2,7 @@
 import { defineConfig } from "astro/config";
 import starlight from "@astrojs/starlight";
 import starlightThemeFlexoki from "starlight-theme-flexoki";
+import starlightBlog from "starlight-blog";
 
 // https://astro.build/config
 export default defineConfig({
@@ -20,6 +21,9 @@ export default defineConfig({
         starlightThemeFlexoki({
           accentColor: "yellow",
         }),
+        starlightBlog({
+          title: "Blog",
+        }),
       ],
       sidebar: [
         {
@@ -30,6 +34,10 @@ export default defineConfig({
           //   // Each item here is one entry in the navigation menu.
           //   { label: "Discover programs", slug: "linux/program_discovery" },
           // ],
+        },
+        {
+          label: "Bluefin",
+          autogenerate: { directory: "bluefin" },
         },
       ],
     }),
